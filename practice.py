@@ -20,8 +20,8 @@ if mod > 0:
 else:
     print("You picked an 'EVEN' Number")
 
-# #  Ask the user for a number and return a list that contains only
-# #  elements from the original list a that are smaller than that number given by the user.
+ #  Ask the user for a number and return a list that contains only
+ #  elements from the original list a that are smaller than that number given by the user.
 
 print("Choose a number from this list \n(1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89):")
 list1 = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
