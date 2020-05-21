@@ -20,9 +20,9 @@ if mod > 0:
 else:
     print("You picked an 'EVEN' Number")
 
-#  Ask the user for a number and return a list that contains only
-#  elements from the original list a that are smaller than that number given by the user.
-#
+# #  Ask the user for a number and return a list that contains only
+# #  elements from the original list a that are smaller than that number given by the user.
+
 print("Choose a number from this list \n(1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89):")
 list1 = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 user_choice = int(input())
@@ -45,3 +45,21 @@ for number in list_Range:
     if num % number == 0:
         divisor_list.append(number)
 print(divisor_list)
+
+
+# Take two lists, say for example these two:
+#   a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+#   b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+# and write a program that returns a list that contains
+# only the elements that are common
+# between the lists (without duplicates). Make sure your
+# program works on two lists of different sizes.
+
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+c = []
+
+for i in b:
+    if i in a:
+        c.append(i)
+print(c)
