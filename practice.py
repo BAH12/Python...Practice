@@ -10,7 +10,6 @@ age = int(input())
 year = str((2020 - age) + 100)
 print(name + " Will be 100 years old in a year " + year)
 
-
 # Ask the user for a number. Depending on whether the number is even or odd,
 # print out an appropriate message to the user.
 
@@ -22,9 +21,8 @@ if mod > 0:
 else:
     print("You picked an 'EVEN' Number")
 
-
- #  Ask the user for a number and return a list that contains only
- #  elements from the original list a that are smaller than that number
+#  Ask the user for a number and return a list that contains only
+#  elements from the original list a that are smaller than that number
 #  given by the user.
 
 
@@ -36,7 +34,6 @@ if user_choice not in list1:
 elif user_choice in list1:
     print("Correct, you have picked a number from the list")
     print("Thank You")
-
 
 # Create a program that asks the user for a number and then
 # prints out a list of all the divisors of that number.
@@ -52,8 +49,6 @@ for number in list_Range:
     if num % number == 0:
         divisor_list.append(number)
 print(divisor_list)
-
-
 
 # Take two lists, say for example these two:
 #   a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
@@ -72,3 +67,23 @@ for i in b:
     if i in a:
         c.append(i)
 print(c)
+
+
+# Ask the user for a string and print out whether this string is a palindrome or not.
+# (A palindrome is a string that reads the same forwards and backwards.)
+
+print("Please Enter a Word")
+wrd = input()
+rvs = wrd[::-1]
+print(rvs)
+if wrd == rvs:
+    print("This is a palindrome")
+
+
+# Let’s say I give you a list saved in a variable: a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100].
+# Write one line of Python that takes this list a and makes a new list that has only the even
+# elements of this list in it.
+
+a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+b = [number for number in a if number % 2 == 0]
+print(b)
