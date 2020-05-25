@@ -129,3 +129,32 @@ def compare(u1, u2):
 print(compare(user1_answer, user2_answer))
 
 sys.exit()
+
+# Generate a random number between 1 and 9 (including 1 and 9).
+# Ask the user to guess the number, then tell them whether they guessed too low, too high, or exactly right
+
+import random
+
+number = random.randint(1, 9)
+guess = 0
+count = 0
+print("Hello,What is You Name ?\nI Will Like To Play a Game With You\n Which is Guess The Number")
+name = input()
+
+while guess != number and guess != "exit":
+    print(name + " What is Your Guess")
+    guess = input()
+    if guess == "exit":
+        break
+
+    guess = int(guess)
+    count += 1
+
+    if guess < number:
+        print(name + " Your Guess is Too Low")
+    elif guess > number:
+        print(name + " Your Guess is Too High")
+
+    else:
+        print(name + " You Got it")
+    print("And it Only Took You ", count, "Tries")
