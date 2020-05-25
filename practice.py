@@ -68,7 +68,6 @@ for i in b:
         c.append(i)
 print(c)
 
-
 # Ask the user for a string and print out whether this string is a palindrome or not.
 # (A palindrome is a string that reads the same forwards and backwards.)
 
@@ -79,7 +78,6 @@ print(rvs)
 if wrd == rvs:
     print("This is a palindrome")
 
-
 # Let’s say I give you a list saved in a variable: a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100].
 # Write one line of Python that takes this list a and makes a new list that has only the even
 # elements of this list in it.
@@ -87,3 +85,47 @@ if wrd == rvs:
 a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 b = [number for number in a if number % 2 == 0]
 print(b)
+
+# Make a two-player Rock,Paper,Scissors Game (Ask for player plays (Using input )
+# Compare them ,print out a message congratulation to the winner
+# and ask if the players want to start a new game)
+
+import sys
+
+print("What's Your Name")
+user1 = input()
+print("What's Your Name")
+user2 = input()
+print("%s Do you want to choose ROCK,PAPER or SCISSORS ?" % user1)
+user1_answer = input()
+print("%s Do you want to choose ROCK,PAPER or SCISSORS ?" % user2)
+user2_answer = input()
+
+
+def compare(u1, u2):
+    if u1 == u2:
+        return "It's a tie"
+    elif u1 == "rock":
+        if u2 == "scissors":
+            return "Rock Wins"
+        else:
+            return "Paper Wins"
+
+    elif u1 == "scissors":
+        if u2 == "paper":
+            return "Scissors Wins"
+        else:
+            return "Rock Wins"
+
+    elif u1 == "paper":
+        if u2 == "rock":
+            return "Paper Wins"
+        else:
+            return "Scissors Wins"
+    else:
+        return "Invalid input! You have not entered rock, paper or scissors, try again."
+
+
+print(compare(user1_answer, user2_answer))
+
+sys.exit()
