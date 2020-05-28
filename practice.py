@@ -158,3 +158,48 @@ while guess != number and guess != "exit":
     else:
         print(name + " You Got it")
     print("And it Only Took You ", count, "Tries")
+
+# This week’s exercise is going to be revisiting an old exercise (see Exercise 5)
+# except require the solution in a different way.
+#
+# Take two lists, say for example these two:
+#
+#   a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+# 	b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+# and write a program that returns a list that contains only the elements that are common between
+# the lists (without duplicates). Make sure your program works on two lists of different sizes
+
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+result = []
+for i in b:
+    if i in a:
+        result.append(i)
+print(result)
+
+
+def get_integer(help_text):
+    return int(input(help_text))
+
+
+age = get_integer("Tell me your age ")
+school_year = get_integer("What grade are you in ? ")
+if age > 15:
+    print("You are over the age of 15")
+print("You are in Grade " + str(school_year))
+
+num = int(input("Insert a Number "))
+a = [x for x in range(2, num) if num % x == 0]
+
+
+def is_prime():
+    if num > 1:
+        if len(a) == 0:
+            print("Prime")
+        else:
+            print("Not a Prime")
+    else:
+        print("Not Prime")
+
+
+is_prime()
