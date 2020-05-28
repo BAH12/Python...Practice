@@ -203,3 +203,32 @@ def is_prime():
 
 
 is_prime()
+
+
+# Write a program that asks the user how many Fibonacci numbers to generate
+# and then generates them. Take this opportunity to think about how you can
+# use functions. Make sure to ask the user to enter the number of numbers in
+# the sequence to generate.(Hint: The Fibonacci sequence is a sequence of numbers
+# where the next number in the sequence is the sum of the previous two numbers in
+# the sequence. The sequence looks like this: 1, 1, 2, 3, 5, 8, 13, …)
+
+def fibonacci():
+    global finac
+    num1 = int(input("How many numbers to generates ? "))
+    bah = 1
+    if num1 == 0:
+        finac = []
+    elif num1 == 1:
+        finac = [1]
+    elif num1 == 2:
+        finac = [1, 1]
+    elif num1 > 2:
+        finac = [1, 1]
+        while bah < (num1 - 1):
+            finac.append(finac[1] + finac[1 - 1])
+            bah += 1
+    return finac
+
+
+print(fibonacci())
+input()
