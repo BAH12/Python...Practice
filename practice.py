@@ -213,7 +213,6 @@ is_prime()
 # the sequence. The sequence looks like this: 1, 1, 2, 3, 5, 8, 13, …)
 
 def fibonacci():
-    global finac
     num1 = int(input("How many numbers to generates ? "))
     bah = 1
     if num1 == 0:
@@ -231,4 +230,43 @@ def fibonacci():
 
 
 print(fibonacci())
-input()
+
+
+# Write a program (using functions!) that asks the user for a long string
+# containing multiple words. Print back to the user the same string, except with
+# the words in backwards order. For example, say I type the string:
+# My name is Michele
+# Then I would see the string:
+# Michele is name My
+# shown back to me.
+
+
+def reverse_v1(x):
+    y = x.split()
+    bah = []
+    for word in y:
+        bah.insert(0, word)
+    return " ".join(y[::-1])
+
+
+def reverse_v2(x):
+    y = x.split()
+    return " ".join(y[:: - 1])
+
+
+def reverse_v3(x):
+    y = x.split()
+    return " ".join(y[:: - 1])
+
+
+def reverse_v4(x):
+    y = x.split()
+    y.reverse()
+    return " ".join(y)
+
+
+test1 = input("Enter a Sentence ")
+print(reverse_v1(test1))
+print(reverse_v2(test1))
+print(reverse_v3(test1))
+print(reverse_v4(test1))
