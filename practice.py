@@ -271,4 +271,16 @@ print(reverse_v2(test1))
 print(reverse_v3(test1))
 print(reverse_v4(test1))
 
-print("Hello Ba")
+
+
+# Write a password generator in Python. Be creative with
+# how you generate passwords - strong passwords have a mix of
+# lowercase letters, uppercase letters, numbers, and symbols.
+# The passwords should be random, generating a new password
+# every time the user asks for a new password. Include your code in a main method.
+
+import random
+letters = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?"
+pw_len = 8
+password = "".join(random.sample(letters, pw_len))
+print(password)
